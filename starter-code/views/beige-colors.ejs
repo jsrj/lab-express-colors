@@ -3,8 +3,8 @@
 <ul>
   <% colorsForView.forEach( (oneColor) => { %>
 
+<% if (oneColor.category === "beige") { %>
 <div class="swatch">
-<% if (oneColor.category === 'beige") { %>
     <div class="box" style="background-color: <%= oneColor.hex %>"></div>
     <div class="box2"> <div class="panel panel-default"><div class="panel-body">
         <%- oneColor.keyword  %> &nbsp; <%-  oneColor.hex %> &nbsp; <%- oneColor.category %>
@@ -12,4 +12,5 @@
 </div>
 <% } %>
 <%  }) %>
+
 </ul>
